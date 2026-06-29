@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Fund Tracker — All Philippine Investment Funds</title>
+    <style>
+        :root {
+            --bg: #0f1117;
+            --surface: #1a1d27;
+            --surface2: #232738;
+            --border: #2d3148;
+            --text: #e1e4ed;
+            --text-muted: #8b8fa3;
+            --accent: #6366f1;
+            --accent-hover: #818cf8;
+            --green: #22c55e;
+            --green-bg: rgba(34, 197, 94, 0.1);
+            --red: #ef4444;
+            --red-bg: rgba(239, 68, 68, 0.1);
+            --yellow: #eab308;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px 16px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            background: linear-gradient(135deg, var(--accent), #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header .subtitle {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-bottom: 24px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 20px;
+        }
+
+        .stat-card .label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-card .value {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 4px;
+        }
+
+        .stat-card .value.green { color: var(--green); }
+        .stat-card .value.red { color: var(--red); }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 16px 10px 40px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--accent);
+        }
+
+        .search-box::before {
+            content: "\1F50D";
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-muted);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--accent);
+            color: var(--text);
+        }
+
+        .filter-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        .type-toggle {
+            display: flex;
+            gap: 6px;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        thead th {
+            background: var(--surface2);
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        thead th:hover {
+            color: var(--accent-hover);
+        }
+
+        thead th.sorted-asc::after { content: " \2191"; }
+        thead th.sorted-desc::after { content: " \2193"; }
+
+        tbody tr {
+            border-top: 1px solid var(--border);
+            transition: background 0.15s;
+        }
+
+        tbody tr:hover {
+            background: var(--surface);
+        }
+
+        tbody td {
+            padding: 10px 14px;
+            white-space: nowrap;
+        }
+
+        td.fund-name {
+            white-space: normal;
+            min-width: 250px;
+            max-width: 350px;
+            font-weight: 500;
+        }
+
+        td.positive {
+            color: var(--green);
+            background: var(--green-bg);
+            font-weight: 600;
+        }
+
+        td.negative {
+            color: var(--red);
+            background: var(--red-bg);
+        }
+
+        td.na { color: var(--text-muted); font-style: italic; }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .badge-uitf { background: rgba(99, 102, 241, 0.15); color: #818cf8; }
+        .badge-mf { background: rgba(34, 197, 94, 0.15); color: #4ade80; }
+        .badge-php { background: rgba(234, 179, 8, 0.15); color: #facc15; }
+        .badge-usd { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+        .badge-eur { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+
+        .top-badge {
+            display: inline-block;
+            padding: 1px 6px;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: #fff;
+            margin-left: 6px;
+        }
+
+        .count-label {
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 0 16px;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        .leaderboard {
+            margin-bottom: 32px;
+        }
+
+        .leaderboard h2 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        .leader-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 12px;
+        }
+
+        .leader-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .leader-card .rank {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--text-muted);
+            margin-right: 14px;
+            min-width: 30px;
+        }
+
+        .leader-card .rank.gold { color: #f59e0b; }
+        .leader-card .rank.silver { color: #94a3b8; }
+        .leader-card .rank.bronze { color: #c2884e; }
+
+        .leader-card .info {
+            flex: 1;
+        }
+
+        .leader-card .info .name {
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 1.3;
+        }
+
+        .leader-card .info .meta {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .leader-card .ytd {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--green);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 16px 8px; }
+            header h1 { font-size: 22px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .controls { flex-direction: column; }
+            .search-box { min-width: 100%; }
+            table { font-size: 12px; }
+            td.fund-name { min-width: 180px; }
+            .leader-grid { grid-template-columns: 1fr; }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: var(--text-muted);
+        }
+
+        .loading .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border);
+            border-top: 3px solid var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-bottom: 16px;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PH Fund Tracker</h1>
+            <div class="subtitle">All Philippine Investment Funds — NAVPS Performance Dashboard</div>
+        </header>
+
+        <div class="last-updated" id="lastUpdated">Loading...</div>
+
+        <div class="stats-grid" id="statsGrid"></div>
+
+        <div class="leaderboard" id="leaderboard"></div>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search fund name, manager...">
+            </div>
+            <div class="filter-group" id="categoryFilters"></div>
+            <div class="type-toggle" id="typeFilters"></div>
+        </div>
+
+        <div class="count-label" id="countLabel"></div>
+
+        <div class="table-wrapper">
+            <table id="fundsTable">
+                <thead>
+                    <tr>
+                        <th data-col="rank">#</th>
+                        <th data-col="name">Fund Name</th>
+                        <th data-col="type">Type</th>
+                        <th data-col="category">Category</th>
+                        <th data-col="currency">Ccy</th>
+                        <th data-col="navpu">NAVPU/S</th>
+                        <th data-col="ytd_return">YTD</th>
+                        <th data-col="one_yr_return">1 Yr</th>
+                        <th data-col="three_yr_return">3 Yr</th>
+                        <th data-col="five_yr_return">5 Yr</th>
+                        <th data-col="ten_yr_return">10 Yr</th>
+                    </tr>
+                </thead>
+                <tbody id="fundsBody">
+                    <tr><td colspan="11" class="loading">
+                        <div class="spinner"></div>
+                        <div>Loading fund data...</div>
+                    </td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="no-results" id="noResults" style="display:none;">
+            No funds match your filters.
+        </div>
+
+        <footer>
+            <p>Data sources: <a href="https://uitf.com.ph" target="_blank">UITF.com.ph</a> (TOAP) &amp;
+            <a href="https://pifa.com.ph" target="_blank">PIFA</a> via BusinessMirror</p>
+            <p style="margin-top:4px">Auto-updated daily via GitHub Actions. Not financial advice.</p>
+            <p style="margin-top:4px"><a href="https://github.com/AIinterruptor/ph-fund-tracker" target="_blank">View on GitHub</a></p>
+        </footer>
+    </div>
+
+    <script>
+    (function() {
+        let allFunds = [];
+        let currentSort = { col: 'ytd_return', dir: 'desc' };
+        let activeCategory = 'All';
+        let activeType = 'All';
+
+        async function loadData() {
+            try {
+                const resp = await fetch('data/funds.json');
+                const data = await resp.json();
+                allFunds = data.funds;
+                document.getElementById('lastUpdated').textContent =
+                    `Last updated: ${data.last_updated} | ${data.total_funds} funds tracked | Sources: ${data.sources.join(', ')}`;
+                renderStats();
+                renderLeaderboard();
+                buildFilters();
+                renderTable();
+            } catch (e) {
+                document.getElementById('fundsBody').innerHTML =
+                    '<tr><td colspan="11" class="no-results">Failed to load data. Please try again later.</td></tr>';
+            }
+        }
+
+        function renderStats() {
+            const grid = document.getElementById('statsGrid');
+            const total = allFunds.length;
+            const positive = allFunds.filter(f => f.ytd_return != null && f.ytd_return > 0).length;
+            const negative = allFunds.filter(f => f.ytd_return != null && f.ytd_return < 0).length;
+            const uitfs = allFunds.filter(f => f.type === 'UITF').length;
+            const mfs = allFunds.filter(f => f.type === 'Mutual Fund').length;
+            const best = allFunds.reduce((a, b) =>
+                (a.ytd_return || -999) > (b.ytd_return || -999) ? a : b, allFunds[0]);
+
+            grid.innerHTML = `
+                <div class="stat-card">
+                    <div class="label">Total Funds</div>
+                    <div class="value">${total}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Positive YTD</div>
+                    <div class="value green">${positive}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Negative YTD</div>
+                    <div class="value red">${negative}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">UITFs / Mutual Funds</div>
+                    <div class="value">${uitfs} / ${mfs}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Top Performer YTD</div>
+                    <div class="value green">${best.ytd_return != null ? best.ytd_return.toFixed(2) + '%' : 'N/A'}</div>
+                </div>
+            `;
+        }
+
+        function renderLeaderboard() {
+            const container = document.getElementById('leaderboard');
+            const top10 = allFunds
+                .filter(f => f.ytd_return != null)
+                .sort((a, b) => b.ytd_return - a.ytd_return)
+                .slice(0, 10);
+
+            const rankClass = (i) => i === 0 ? 'gold' : i === 1 ? 'silver' : i === 2 ? 'bronze' : '';
+
+            container.innerHTML = `
+                <h2>Top 10 Performers (YTD 2026)</h2>
+                <div class="leader-grid">
+                    ${top10.map((f, i) => `
+                        <div class="leader-card">
+                            <div class="rank ${rankClass(i)}">${i + 1}</div>
+                            <div class="info">
+                                <div class="name">${f.name}</div>
+                                <div class="meta">${f.type} &middot; ${f.category} &middot; ${f.currency}</div>
+                            </div>
+                            <div class="ytd">+${f.ytd_return.toFixed(2)}%</div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function buildFilters() {
+            const categories = ['All', ...new Set(allFunds.map(f => f.category).filter(Boolean).sort())];
+            const catContainer = document.getElementById('categoryFilters');
+            catContainer.innerHTML = categories.map(c =>
+                `<button class="filter-btn ${c === 'All' ? 'active' : ''}" data-cat="${c}">${c}</button>`
+            ).join('');
+
+            catContainer.addEventListener('click', (e) => {
+                if (e.target.classList.contains('filter-btn')) {
+                    catContainer.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    activeCategory = e.target.dataset.cat;
+                    renderTable();
+                }
+            });
+
+            const typeContainer = document.getElementById('typeFilters');
+            typeContainer.innerHTML = ['All', 'UITF', 'Mutual Fund'].map(t =>
+                `<button class="filter-btn ${t === 'All' ? 'active' : ''}" data-type="${t}">${t}</button>`
+            ).join('');
+
+            typeContainer.addEventListener('click', (e) => {
+                if (e.target.classList.contains('filter-btn')) {
+                    typeContainer.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    activeType = e.target.dataset.type;
+                    renderTable();
+                }
+            });
+        }
+
+        function getFiltered() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            return allFunds.filter(f => {
+                if (activeCategory !== 'All' && f.category !== activeCategory) return false;
+                if (activeType !== 'All' && f.type !== activeType) return false;
+                if (search) {
+                    const haystack = `${f.name} ${f.manager} ${f.category} ${f.type}`.toLowerCase();
+                    if (!haystack.includes(search)) return false;
+                }
+                return true;
+            });
+        }
+
+        function sortFunds(funds) {
+            const col = currentSort.col;
+            const dir = currentSort.dir === 'asc' ? 1 : -1;
+            return funds.sort((a, b) => {
+                let va = a[col], vb = b[col];
+                if (col === 'name' || col === 'type' || col === 'category' || col === 'currency') {
+                    va = (va || '').toLowerCase();
+                    vb = (vb || '').toLowerCase();
+                    return va < vb ? -dir : va > vb ? dir : 0;
+                }
+                if (va == null) va = -Infinity;
+                if (vb == null) vb = -Infinity;
+                return (va - vb) * dir;
+            });
+        }
+
+        function fmtReturn(val) {
+            if (val == null) return '<td class="na">n/a</td>';
+            const cls = val > 0 ? 'positive' : val < 0 ? 'negative' : '';
+            const sign = val > 0 ? '+' : '';
+            return `<td class="${cls}">${sign}${val.toFixed(2)}%</td>`;
+        }
+
+        function fmtNavpu(val, currency) {
+            if (val == null) return '<td class="na">n/a</td>';
+            const prefix = currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '';
+            return `<td>${prefix}${val.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 4})}</td>`;
+        }
+
+        function renderTable() {
+            const filtered = sortFunds(getFiltered());
+            const tbody = document.getElementById('fundsBody');
+            const noResults = document.getElementById('noResults');
+            const countLabel = document.getElementById('countLabel');
+
+            countLabel.textContent = `Showing ${filtered.length} of ${allFunds.length} funds`;
+
+            if (filtered.length === 0) {
+                tbody.innerHTML = '';
+                noResults.style.display = 'block';
+                return;
+            }
+            noResults.style.display = 'none';
+
+            // Determine top 10 YTD for badge
+            const allSortedYTD = allFunds
+                .filter(f => f.ytd_return != null)
+                .sort((a, b) => b.ytd_return - a.ytd_return)
+                .slice(0, 10)
+                .map(f => f.name);
+
+            tbody.innerHTML = filtered.map((f, i) => {
+                const typeBadge = f.type === 'UITF'
+                    ? '<span class="badge badge-uitf">UITF</span>'
+                    : '<span class="badge badge-mf">MF</span>';
+                const ccyBadge = f.currency === 'USD'
+                    ? '<span class="badge badge-usd">USD</span>'
+                    : f.currency === 'EUR'
+                    ? '<span class="badge badge-eur">EUR</span>'
+                    : '<span class="badge badge-php">PHP</span>';
+                const topBadge = allSortedYTD.includes(f.name) ? '<span class="top-badge">TOP 10</span>' : '';
+
+                return `<tr>
+                    <td>${i + 1}</td>
+                    <td class="fund-name">${f.name}${topBadge}</td>
+                    <td>${typeBadge}</td>
+                    <td>${f.category || ''}</td>
+                    <td>${ccyBadge}</td>
+                    ${fmtNavpu(f.navpu, f.currency)}
+                    ${fmtReturn(f.ytd_return)}
+                    ${fmtReturn(f.one_yr_return)}
+                    ${fmtReturn(f.three_yr_return)}
+                    ${fmtReturn(f.five_yr_return)}
+                    ${fmtReturn(f.ten_yr_return)}
+                </tr>`;
+            }).join('');
+
+            // Update sort indicators
+            document.querySelectorAll('thead th').forEach(th => {
+                th.classList.remove('sorted-asc', 'sorted-desc');
+                if (th.dataset.col === currentSort.col) {
+                    th.classList.add(currentSort.dir === 'asc' ? 'sorted-asc' : 'sorted-desc');
+                }
+            });
+        }
+
+        // Sort handlers
+        document.querySelector('thead').addEventListener('click', (e) => {
+            const th = e.target.closest('th');
+            if (!th || !th.dataset.col) return;
+            const col = th.dataset.col;
+            if (currentSort.col === col) {
+                currentSort.dir = currentSort.dir === 'desc' ? 'asc' : 'desc';
+            } else {
+                currentSort = { col, dir: 'desc' };
+            }
+            renderTable();
+        });
+
+        // Search handler
+        document.getElementById('searchInput').addEventListener('input', renderTable);
+
+        // Init
+        loadData();
+    })();
+    </script>
+</body>
+</html>
