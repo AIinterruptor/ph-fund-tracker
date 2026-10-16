@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-15 02:14 UTC",
-  "total_funds": 166,
+  "last_updated": "2026-10-16 02:05 UTC",
+  "total_funds": 222,
   "sources": [
     "UITF.com.ph (Trust Officers Association of the Philippines)",
     "PIFA (Philippine Investment Funds Association) via BusinessMirror"
@@ -20,6 +20,19 @@
       "ten_yr_return": 30.47
     },
     {
+      "name": "Manulife Asia Best Select Equity Fund (PHP Unhedged Class I)",
+      "manager": "Manulife Investment Management and Trust Corporation",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 34.0338,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "Sun Life Prosperity World Equity Index Feeder Fund, Inc.",
       "manager": "Sun Life",
       "category": "Feeder Fund",
@@ -31,6 +44,19 @@
       "three_yr_return": 14.56,
       "five_yr_return": null,
       "ten_yr_return": 13.7
+    },
+    {
+      "name": "Manulife Asia Best Select Equity Fund (PHP Unhedged Class A)",
+      "manager": "Manulife Investment Management and Trust Corporation",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 32.4575,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
     },
     {
       "name": "Sun Life Prosperity World Voyager Fund, Inc.",
@@ -345,6 +371,19 @@
       "ten_yr_return": 0.62
     },
     {
+      "name": "Manulife Money Market Fund (Class I)",
+      "manager": "Manulife Investment Management and Trust Corporation",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.9897,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "CHINABANK CASH FUND",
       "manager": "China Banking Corporation",
       "category": "Money Market",
@@ -410,6 +449,19 @@
       "ten_yr_return": null
     },
     {
+      "name": "CTBC Money Market Fund",
+      "manager": "CTBC Bank (Philippines) Corp.",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.8481,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "SB PESO CASH MANAGEMENT FUND",
       "manager": "Security Bank Corporation",
       "category": "Money Market",
@@ -429,6 +481,19 @@
       "type": "UITF",
       "currency": "PHP",
       "ytd_return": 2.7905,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "Manulife Money Market Fund (Class J)",
+      "manager": "Manulife Investment Management and Trust Corporation",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.7847,
       "navpu": null,
       "one_yr_return": null,
       "three_yr_return": null,
@@ -460,6 +525,19 @@
       "three_yr_return": null,
       "five_yr_return": null,
       "ten_yr_return": 1.18
+    },
+    {
+      "name": "RCBC PESO CASH MANAGEMENT FUND",
+      "manager": "RCBC Trust Corporation",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.7526,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
     },
     {
       "name": "PBCOM PHP MONEY MARKET FUND Class E",
@@ -546,6 +624,45 @@
       "type": "UITF",
       "currency": "PHP",
       "ytd_return": 2.6627,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "ATRAM Peso Cash Management Fund (M Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.6573,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "ATRAM Peso Liquid Fund (V Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.6552,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "BankCom Peso Money Market Fund",
+      "manager": "Bank of Commerce",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.641,
       "navpu": null,
       "one_yr_return": null,
       "three_yr_return": null,
@@ -644,6 +761,45 @@
       "ten_yr_return": null
     },
     {
+      "name": "Metro Money Market Fund",
+      "manager": "Metropolitan Bank & Trust Co.",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.5816,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "ATRAM Peso Money Market Fund (Z Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.5749,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "Manulife Money Market Fund (Class A)",
+      "manager": "Manulife Investment Management and Trust Corporation",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.5725,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "CLASS II - UNLAD PANIMULA MM FUND",
       "manager": "Development Bank of the Philippines",
       "category": "Money Market",
@@ -676,6 +832,32 @@
       "type": "UITF",
       "currency": "PHP",
       "ytd_return": 2.5264,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "RCBC PESO SHORT TERM FUND",
+      "manager": "RCBC Trust Corporation",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.5146,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "ATRAM Peso Money Market Fund (D Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.4934,
       "navpu": null,
       "one_yr_return": null,
       "three_yr_return": null,
@@ -722,12 +904,51 @@
       "ten_yr_return": null
     },
     {
+      "name": "ATRAM Short Term Peso Bond Fund",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.4049,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "Metro Short Term Bond Fund",
+      "manager": "Metropolitan Bank & Trust Co.",
+      "category": "Bond - Medium Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.3649,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "SB PESO MONEY MARKET FUND",
       "manager": "Security Bank Corporation",
       "category": "Money Market",
       "type": "UITF",
       "currency": "PHP",
       "ytd_return": 2.3604,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "ATRAM Peso Liquid Fund (A Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.3495,
       "navpu": null,
       "one_yr_return": null,
       "three_yr_return": null,
@@ -754,6 +975,19 @@
       "type": "UITF",
       "currency": "PHP",
       "ytd_return": 2.3105,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "Manulife Stable Income Fund (Class I)",
+      "manager": "Manulife Investment Management and Trust Corporation",
+      "category": "Bond - Medium Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.2893,
       "navpu": null,
       "one_yr_return": null,
       "three_yr_return": null,
@@ -800,12 +1034,38 @@
       "ten_yr_return": null
     },
     {
+      "name": "ATRAM Peso Money Market Fund (A Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.1648,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "PSBANK MONEY MARKET FUND",
       "manager": "Philippine Savings Bank",
       "category": "Money Market",
       "type": "UITF",
       "currency": "PHP",
       "ytd_return": 2.1594,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "RCBC PESO MONEY MARKET FUND",
+      "manager": "RCBC Trust Corporation",
+      "category": "Money Market",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 2.0408,
       "navpu": null,
       "one_yr_return": null,
       "three_yr_return": null,
@@ -878,6 +1138,32 @@
       "ten_yr_return": -0.71
     },
     {
+      "name": "ATRAM Medium Term Peso Bond Fund (Z Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Bond - Long Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 1.7549,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "Manulife Stable Income Fund (Class A)",
+      "manager": "Manulife Investment Management and Trust Corporation",
+      "category": "Bond - Medium Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 1.6832,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "ALFM Global Multi-Asset Income Fund, Inc. (USD)",
       "manager": "ALFM",
       "category": "Feeder Fund",
@@ -902,6 +1188,19 @@
       "three_yr_return": 1.54,
       "five_yr_return": 1.95,
       "ten_yr_return": -0.55
+    },
+    {
+      "name": "ATRAM Medium Term Peso Bond Fund (D Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Bond - Long Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 1.5949,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
     },
     {
       "name": "Philam Bond Fund, Inc.",
@@ -956,6 +1255,19 @@
       "ten_yr_return": null
     },
     {
+      "name": "ATRAM Medium Term Peso Bond Fund (A Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Bond - Long Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 0.9359,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "ALFM Euro Bond Fund, Inc.",
       "manager": "ALFM",
       "category": "Bond",
@@ -967,6 +1279,32 @@
       "three_yr_return": 0.26,
       "five_yr_return": 0.72,
       "ten_yr_return": -0.3
+    },
+    {
+      "name": "Metro Max-3 Bond Fund",
+      "manager": "Metropolitan Bank & Trust Co.",
+      "category": "Bond - Medium Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 0.7299,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "Manulife Income Builder Fund (Class I)",
+      "manager": "Manulife Investment Management and Trust Corporation",
+      "category": "Bond - Long Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 0.5841,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
     },
     {
       "name": "PBB Peso Bond Fund",
@@ -993,6 +1331,19 @@
       "three_yr_return": -0.07,
       "five_yr_return": null,
       "ten_yr_return": -0.05
+    },
+    {
+      "name": "ATRAM Long Term Peso Bond Fund (D Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Bond - Intermediate Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 0.4884,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
     },
     {
       "name": "Sun Life Investment Management (SLIMTC) PHP Medium-Term Multi-Class Fixed Income Bond Fund - Class C",
@@ -1034,6 +1385,19 @@
       "ten_yr_return": 1.33
     },
     {
+      "name": "Metro Corporate Bond Fund",
+      "manager": "Metropolitan Bank & Trust Co.",
+      "category": "Bond - Long Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": 0.2608,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "First Metro Save and Learn Fixed Income Fund, Inc.",
       "manager": "First Metro Asset Management",
       "category": "Bond",
@@ -1066,6 +1430,32 @@
       "type": "UITF",
       "currency": "PHP",
       "ytd_return": 0.1772,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "ATRAM Long Term Peso Bond Fund (A Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Bond - Intermediate Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -0.1307,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "Manulife Income Builder Fund (Class A)",
+      "manager": "Manulife Investment Management and Trust Corporation",
+      "category": "Bond - Long Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -0.2028,
       "navpu": null,
       "one_yr_return": null,
       "three_yr_return": null,
@@ -1177,6 +1567,19 @@
       "ten_yr_return": -2.52
     },
     {
+      "name": "Metro Max-5 Bond Fund",
+      "manager": "Metropolitan Bank & Trust Co.",
+      "category": "Bond - Long Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -0.5487,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "Sun Life Investment Management (SLIMTC) PHP Medium-Term Multi-Class Fixed Income Bond Fund - Class A",
       "manager": "Sun Life Investment Management and Trust Corporation",
       "category": "Bond - Long Term",
@@ -1235,6 +1638,19 @@
       "type": "UITF",
       "currency": "PHP",
       "ytd_return": -1.056,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "ATRAM Tax-Exempt Peso Bond Fund",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Bond - Intermediate Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -1.0657,
       "navpu": null,
       "one_yr_return": null,
       "three_yr_return": null,
@@ -1385,6 +1801,19 @@
       "ten_yr_return": null
     },
     {
+      "name": "ATRAM Soldivo Philippine Equity Leaders Fund (D Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -1.7605,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "Sun Life Prosperity Achiever Fund 2038, Inc.",
       "manager": "Sun Life",
       "category": "Balanced (Target Date)",
@@ -1417,6 +1846,19 @@
       "type": "UITF",
       "currency": "PHP",
       "ytd_return": -2.1389,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "RCBC MULTI-ASSET FUND",
+      "manager": "RCBC Trust Corporation",
+      "category": "Bond / Fixed Income",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -2.1487,
       "navpu": null,
       "one_yr_return": null,
       "three_yr_return": null,
@@ -1541,6 +1983,19 @@
       "ten_yr_return": null
     },
     {
+      "name": "BankCom Peso Long Term Bond Fund",
+      "manager": "Bank of Commerce",
+      "category": "Bond - Intermediate Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -2.5888,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "Sun Life of Canada Prosperity Balanced Fund, Inc.",
       "manager": "Sun Life",
       "category": "Balanced",
@@ -1560,6 +2015,19 @@
       "type": "UITF",
       "currency": "PHP",
       "ytd_return": -2.7172,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "ATRAM Peso Fixed Income Fund",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Bond - Intermediate Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -2.7292,
       "navpu": null,
       "one_yr_return": null,
       "three_yr_return": null,
@@ -1593,6 +2061,19 @@
       "ten_yr_return": 0.54
     },
     {
+      "name": "ATRAM Soldivo Philippine Equity Leaders Fund (A Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -2.9404,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "Sun Life Prosperity Achiever Fund 2048, Inc.",
       "manager": "Sun Life",
       "category": "Balanced (Target Date)",
@@ -1604,6 +2085,45 @@
       "three_yr_return": -1.78,
       "five_yr_return": null,
       "ten_yr_return": -0.04
+    },
+    {
+      "name": "Manulife Equity Wealth Fund (Class I)",
+      "manager": "Manulife Investment Management and Trust Corporation",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -3.1362,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "ABF PHILIPPINES BOND INDEX FUND",
+      "manager": "BPI WEALTH",
+      "category": "Bond - Intermediate Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -3.2688,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "ATRAM Peso Balanced Fund",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Bond / Fixed Income",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -3.5157,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
     },
     {
       "name": "BPI PHILIPPINE HIGH DIVIDEND EQUITY FUND",
@@ -1632,6 +2152,19 @@
       "ten_yr_return": 2.04
     },
     {
+      "name": "RCBC R25 DIVIDEND EQUITY FUND",
+      "manager": "RCBC Trust Corporation",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -3.8669,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "United Fund, Inc.",
       "manager": "United Fund",
       "category": "Equity",
@@ -1643,6 +2176,58 @@
       "three_yr_return": 0.27,
       "five_yr_return": -0.62,
       "ten_yr_return": -0.94
+    },
+    {
+      "name": "Manulife Equity Wealth Fund (Class A)",
+      "manager": "Manulife Investment Management and Trust Corporation",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -4.2755,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "Metro Unit Paying Fund",
+      "manager": "Metropolitan Bank & Trust Co.",
+      "category": "Bond - Intermediate Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -4.4876,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "Metro Balanced Fund",
+      "manager": "Metropolitan Bank & Trust Co.",
+      "category": "Bond / Fixed Income",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -4.5387,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "RCBC PESO FIXED INCOME FUND",
+      "manager": "RCBC Trust Corporation",
+      "category": "Bond - Intermediate Term",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -4.5559,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
     },
     {
       "name": "LANDBANK Bond Fund",
@@ -1710,6 +2295,45 @@
       "ten_yr_return": null
     },
     {
+      "name": "ATRAM Philippine Sustainable Development and Growth Fund (Y Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -5.1713,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "ATRAM Philippine Sustainable Development and Growth Fund (D Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -5.178,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "ATRAM Philippine Equity Income Opportunity Fund (A Units)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -5.2695,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "SB PESO BOND FUND",
       "manager": "Security Bank Corporation",
       "category": "Bond - Intermediate Term",
@@ -1762,6 +2386,32 @@
       "ten_yr_return": null
     },
     {
+      "name": "ATRAM Philippine Balanced Fund (A Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Bond / Fixed Income",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -5.6159,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "ATRAM Peso Diversified Income Fund",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Bond / Fixed Income",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -5.6366,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "AB CAPITAL BALANCED FUND",
       "manager": "AB Capital Asset Management",
       "category": "Bond / Fixed Income",
@@ -1788,6 +2438,19 @@
       "ten_yr_return": null
     },
     {
+      "name": "RCBC EQUITY FUND",
+      "manager": "RCBC Trust Corporation",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -5.9251,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "PBCOM VALUE EQUITY FUND Class R",
       "manager": "Philippine Bank of Communications",
       "category": "Equity",
@@ -1807,6 +2470,19 @@
       "type": "UITF",
       "currency": "PHP",
       "ytd_return": -6.0105,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
+      "name": "ATRAM Philippine Sustainable Development and Growth Fund (A Unit Class)",
+      "manager": "ATRAM Trust Corporation",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -6.0561,
       "navpu": null,
       "one_yr_return": null,
       "three_yr_return": null,
@@ -1944,6 +2620,19 @@
       "ten_yr_return": -1.04
     },
     {
+      "name": "RCBC R25 BLUE-CHIP EQUITY FUND",
+      "manager": "RCBC Trust Corporation",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -7.2835,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "LANDBANK Equity Fund",
       "manager": "LandBank of the Philippines",
       "category": "Equity",
@@ -2022,6 +2711,19 @@
       "ten_yr_return": -0.54
     },
     {
+      "name": "Metro Equity Fund",
+      "manager": "Metropolitan Bank & Trust Co.",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -8.1219,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "BPI EQUITY VALUE FUND",
       "manager": "BPI WEALTH",
       "category": "Equity",
@@ -2087,6 +2789,19 @@
       "ten_yr_return": null
     },
     {
+      "name": "DIVERSITY DIVIDEND FOCUSED FUND",
+      "manager": "Bank of Commerce",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -11.0847,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
+    },
+    {
       "name": "ATRAM Alpha Opportunity Fund, Inc.",
       "manager": "ATRAM",
       "category": "Equity",
@@ -2098,6 +2813,19 @@
       "three_yr_return": 8.62,
       "five_yr_return": 4.91,
       "ten_yr_return": -3.69
+    },
+    {
+      "name": "Metro High Dividend Yield Unit Paying Fund",
+      "manager": "Metropolitan Bank & Trust Co.",
+      "category": "Equity",
+      "type": "UITF",
+      "currency": "PHP",
+      "ytd_return": -12.2114,
+      "navpu": null,
+      "one_yr_return": null,
+      "three_yr_return": null,
+      "five_yr_return": null,
+      "ten_yr_return": null
     },
     {
       "name": "First Metro Consumer Fund, Inc.",
